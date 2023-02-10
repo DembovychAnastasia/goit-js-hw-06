@@ -12,3 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector("#gallery");
+const listItemArray = [];
+ingredients.forEach((gallery) => {
+  
+
+})
+list.append(...listItemArray);
