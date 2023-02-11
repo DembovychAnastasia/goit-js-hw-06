@@ -13,10 +13,21 @@ const images = [
   },
 ];
 
-const list = document.querySelector("#gallery");
-const listItemArray = [];
-ingredients.forEach((gallery) => {
-  
+// знаходимо список
+const list = document.querySelector('.gallery')
 
-})
-list.append(...listItemArray);
+//перебираємо масив і створюємо елемент з фото
+const markup = images
+	.map(image => `<li><img class="photo" src=${image.url} width = '400' alt='${image.alt}'></img></li>`)
+	.join('')
+
+  list.insertAdjacentHTML('beforeend', markup)
+  
+  
+const pictures = document.querySelectorAll('.photo')
+
+list.style.display = 'flex';
+list.style.flexWrap = 'column-reverse'
+list.style.listStyle = 'none'
+list.style.gap = '20px'
+list.style.justifyContent = 'center'
